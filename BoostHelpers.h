@@ -7,12 +7,15 @@
 
 // Boost
 #include <boost/array.hpp>
+#include "boost/dynamic_bitset.hpp"
 
 // Global namespace
 std::ostream& operator<<(std::ostream& output, const boost::array<size_t, 2>& vertexDescriptor);
 
 namespace BoostHelpers
 {
+  boost::dynamic_bitset<> BinaryToGray(const boost::dynamic_bitset<>& binary);
+
   template <typename TQueue>
   void OutputQueue(TQueue queue);
 
